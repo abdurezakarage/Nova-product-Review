@@ -1,0 +1,50 @@
+.pagination {
+  display: flex;
+  justify-content: center; /* Center align */
+  align-items: center;
+  gap: 1px; /* Minimal gap between buttons */
+  margin-top: 20px;
+}
+
+/* General button styles */
+.pagination-button {
+  padding: 4px 6px; /* Reduce padding for smaller buttons */
+  font-size: 12px; /* Smaller font size */
+  border: 1px solid #ddd;
+  background-color: #f8f9fa;
+  color: #000;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  width: auto; /* Flexible width */
+  min-width: 30px; /* Minimum width for buttons */
+  text-align: center;
+  margin: 0; /* Remove additional button margins */
+}
+
+/* Hover effect */
+.pagination-button:hover {
+  background-color: #e2e6ea;
+}
+
+/* Active button */
+.pagination-button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+/* Disabled button */
+.pagination-button.disabled {
+  background-color: #f8f9fa;
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .pagination-button {
+    padding: 3px 5px; /* Smaller padding for mobile */
+    font-size: 11px; /* Adjust font size */
+  }
+}

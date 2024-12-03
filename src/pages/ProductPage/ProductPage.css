@@ -1,0 +1,172 @@
+
+/* Styling for the Product Card */
+
+.product-card .card-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.product-card .card-text {
+  margin-bottom: 10px;
+}
+
+/* Styling for the Review Product button */
+.btn-danger {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.product-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  min-height: 100vh; /* Make sure the content takes the full viewport height */
+  background-color: #f8f9fa; /* Light background for the page */
+}
+
+/* Style for the product card */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Product image styling */
+.product-card img {
+  max-height: 300px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+/* Center the title, description, and price */
+.product-card .card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.product-card .card-text {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+/* Reviews section */
+.reviews-section {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 20px;
+}
+
+.reviews-section h3 {
+  text-align: center;
+  color: blue;
+  cursor: pointer;
+}
+
+.reviews-list {
+  padding-left: 0;
+}
+
+.reviews-list .list-group-item {
+  margin-bottom: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Button style */
+.product-card .btn-danger {
+  display: block;
+  width: 100%;
+  background-color: #dc3545;
+  color: white;
+  padding: 12px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: none;
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.product-card .btn-danger:hover {
+  background-color: #c82333;
+}
+/* Flexbox container for Delete and Review buttons */
+.button-container {
+  display: flex;
+  justify-content: flex-start; /* Align the buttons to the left */
+  gap: 30px; /* Adds space between the buttons */
+  align-items: center; /* Vertically center-align the items */
+  margin-bottom: 20px; /* Adds space below the buttons */
+}
+
+/* Styling for Review Product button (blue) */
+.btn-review {
+  background-color: #007bff; /* Blue color for the Review Product button */
+  border-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  padding: 12px 30px; /* Increased padding for a wider button */
+  border-radius: 5px;
+  cursor: pointer;
+  width: auto; /* Ensure button is not too stretched */
+}
+
+.btn-review:hover {
+  background-color: #0056b3; /* Darker blue when hovered */
+  border-color: #0056b3;
+}
+
+/* Styling for Delete Product button (red) */
+.btn-danger {
+  background-color: #dc3545; /* Red color for the Delete Product button */
+  border-color: #dc3545;
+  color: white;
+  font-size: 1rem;
+  padding: 12px 30px; /* Increased padding for a wider button */
+  border-radius: 5px;
+  cursor: pointer;
+  width: auto; /* Ensure button is not too stretched */
+}
+
+.btn-danger:hover {
+  background-color: #c82333; /* Darker red when hovered */
+  border-color: #bd2130;
+}
+
+/* Remove underline from Review Product link */
+.reviews-section {
+  font-size: 1.2rem; /* Optional: Make the text slightly larger */
+  font-weight: 600; /* Bold text */
+  cursor: pointer;
+  text-decoration: none; /* Remove underline */
+  display: flex;
+  align-items: center; /* Vertically center the text and buttons */
+}
+
+/* Media query for smaller screen sizes */
+@media (max-width: 768px) {
+  .button-container {
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
+    gap: 15px; /* Reduced gap between buttons when stacked */
+  }
+
+  .btn-review, .btn-danger {
+    width: 100%; /* Make buttons full width on smaller screens */
+    padding: 12px; /* Adjust padding for full-width buttons */
+  }
+}

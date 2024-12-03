@@ -1,0 +1,89 @@
+/* ReviewForm.css */
+
+/* General form styling */
+form {
+  width: 100%;
+  max-width: 500px; /* Limit form width */
+  margin: 0 auto;
+}
+
+/* Rating input field */
+form .form-group:nth-child(1) .form-control {
+  width: 100%;
+  max-width: 100px; /* Limit the width of the rating input */
+  height: 35px; /* Set consistent height for rating input */
+  margin: 0 auto;
+}
+
+/* Reviewer name input field */
+form .form-group:nth-child(2) .form-control {
+  width: 100%;
+  max-width: 400px; /* Limit width for the reviewer name */
+  height: 35px; /* Set consistent height for the name input */
+  margin: 0 auto;
+}
+
+/* Comment textarea */
+form .form-group:nth-child(3) .form-control {
+  width: 100%;
+  max-width: 400px; /* Limit width for the comment input */
+  height: 35px; /* Set consistent height for the comment area */
+  margin: 0 auto;
+  resize: none; /* Disable resizing */
+  padding: 5px; /* Add padding for better user experience */
+}
+
+/* Button styling */
+form .btn {
+  margin-top: 15px;
+  width: 100%;
+  max-width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Flexbox styling for review results */
+.review-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between the reviews */
+}
+
+.review-item {
+  flex: 1 1 calc(20% - 20px); /* 5 items in a row, with gap of 20px */
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.review-item h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.review-item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.review-item .rating {
+  font-weight: bold;
+  color: #ff9900;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .review-item {
+    flex: 1 1 calc(50% - 20px); /* 2 items in a row on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .review-item {
+    flex: 1 1 100%; /* 1 item in a row on smaller screens */
+  }
+}

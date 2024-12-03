@@ -1,0 +1,50 @@
+.review-page .star-rating {
+  display: inline-flex;
+  align-items: center;
+}
+.star-rating span {
+  margin-right: 2px;
+}
+/* ReviewPage.css */
+
+/* Container for all reviews */
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Box for each individual review */
+.review-box {
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Review title (reviewer name) styling */
+.review-box h5 {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* Review comment styling */
+.review-box p {
+  margin: 10px 0;
+  color: #555;
+}
+
+/* Optional: Rating star styling */
+.review-box span {
+  font-size: 1.2em;
+  color: #ffc107;
+}
+
+/* Adjust the container's width */
+.mantine-Container-root {
+  max-width: 600px; /* Set the maximum width of the container */
+  margin: 0 auto; /* Center the container */
+}

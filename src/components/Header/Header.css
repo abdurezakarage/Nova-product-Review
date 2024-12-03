@@ -1,0 +1,67 @@
+/* General Styles */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.button-container, 
+.header-container > div:last-child {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #000; /* Adjust the default color */
+  font-size: 20px; /* Increased font size for better visibility */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #007BFF; /* Change link color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .button-container, 
+  .header-container > div:last-child {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-link {
+    margin: 5px 0;
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    padding: 10px;
+  }
+
+  .nav-link {
+    font-size: 16px; /* Smaller font size for very small screens */
+  }
+}

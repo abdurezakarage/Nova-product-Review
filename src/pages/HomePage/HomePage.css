@@ -1,0 +1,150 @@
+/* Container for the entire page */
+.pcontainer {
+  padding: 0 15px; /* Adjust the padding of the page container */
+}
+
+/* Filter container and sorting */
+.filter-container {
+  display: flex;
+  align-items: center; /* Vertically align items */
+  justify-content: flex-end; /* Align items to the right */
+  margin-bottom: 10px; /* Reduce the bottom margin */
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc; /* Optional separator */
+}
+
+/* Filter and Sort container */
+.filter-sort-container {
+  display: flex;
+  gap: 10px; /* Space between Filters and Sort (reduce gap) */
+  align-items: center;
+  margin-top: 0; /* Ensure no extra top margin */
+}
+
+/* Filters and Sort select styling */
+.filter-sort-container select,
+.filter-sort-container button,
+.filter-sort-container .form-control {
+  min-width: 150px; /* Adjust width as needed */
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Filters styling */
+.filter-sort-container .filters {
+  display: flex;
+  gap: 10px; /* Space between individual filter fields */
+}
+
+/* Sort styling */
+.filter-sort-container .sort {
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Product Grid Layout */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns per row */
+  gap: 20px; /* Space between items */
+  margin-top: 20px;
+}
+
+/* Product Item Styling */
+.product-item {
+  display: flex;
+  flex-direction: column; /* Align content vertically */
+  align-items: center; /* Center content horizontally */
+  justify-content: space-between; /* Space between image, text, and button */
+  height: auto; /* Allow the card height to adjust based on content */
+  background-color: #fff; /* Background color for product cards */
+  border: 1px solid #ddd; /* Border for product cards */
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px; /* Padding inside each card */
+  box-sizing: border-box; /* Include padding and border in width/height */
+  overflow: hidden; /* Prevent overflow */
+  text-align: center; /* Center-align text */
+}
+
+/* Responsive Image Styling */
+.product-item img {
+  width: 100%; /* Full width of the parent container */
+  height: 300px; /* Fixed height for all images */
+  object-fit: cover; /* Ensures the image fits without distortion */
+  border-radius: 4px; /* Optional rounded corners for images */
+  margin-bottom: 10px; /* Space below the image */
+}
+
+/* Product Name Styling */
+.product-item .product-name {
+  font-size: 1.2rem;
+  color: #333333;
+  font-weight: bold;
+  margin-bottom: 10px; /* Space between name and price */
+}
+
+/* Product Price Styling */
+.product-item .product-price {
+  font-size: 1rem;
+  color: #007bff;
+  font-weight: 600;
+  margin-bottom: 15px; /* Space between price and button */
+}
+
+/* Button Styling */
+.view-button {
+  background-color: #007bff; /* Primary button color */
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Pagination and Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns per row */
+  gap: 20px; /* Space between items */
+}
+
+@media (max-width: 1200px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns per row on large screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns per row on tablets */
+  }
+
+  .filter-container {
+    justify-content: flex-start; /* Stack filter and sort on smaller screens */
+  }
+
+  .filter-sort-container {
+    margin-top: 0; /* No additional margin on smaller screens */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  }
+
+  .filter-sort-container select,
+  .filter-sort-container button {
+    width: 100%; /* Full width for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .product-grid {
+    grid-template-columns: 1fr; /* 1 column per row on small screens */
+  }
+}
