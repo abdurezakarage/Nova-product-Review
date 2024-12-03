@@ -3,11 +3,12 @@ import React, { useState } from "react";
 import { useQuery } from "react-query";
 import { Container, Spinner, Alert } from "react-bootstrap";
 import Filters from "../../components/ProductFilter/Filters";
-import Sort from "../../components/Sort/Sort"
+import Sort from "../../components/Sort/Sort";
 import Pagination from "../../components/Pagination/Pagination";
 import ProductCard from "../../components/ProductCard/ProductCard";
 import { fetchProducts } from "../../Api/api";
 import "./HomePage.css";
+import { Flex } from "@mantine/core";
 
 const HomePage = () => {
   const [filters, setFilters] = useState({});

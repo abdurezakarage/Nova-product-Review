@@ -56,7 +56,6 @@ const CreateProductPage = () => {
           <div className="form-group">
             <label htmlFor="formPrice">Price</label>
             <input
-              type="number"
               id="formPrice"
               {...register("price", { required: "Price is required" })}
               placeholder="Enter product price"
@@ -101,7 +100,6 @@ const CreateProductPage = () => {
           <div className="form-group">
             <label htmlFor="formMinimumQuantity">Minimum Quantity</label>
             <input
-              type="number"
               id="formMinimumQuantity"
               {...register("minimumQuantity")}
               placeholder="Enter minimum quantity"
@@ -111,7 +109,6 @@ const CreateProductPage = () => {
           <div className="form-group">
             <label htmlFor="formSellingPrice">Selling Price</label>
             <input
-              type="number"
               id="formSellingPrice"
               {...register("sellingPrice")}
               placeholder="Enter selling price"
@@ -124,7 +121,7 @@ const CreateProductPage = () => {
           <div className="form-group">
             <label htmlFor="formQuantityOnHand">Quantity On Hand</label>
             <input
-              type="number"
+             
               id="formQuantityOnHand"
               {...register("quantityOnHand")}
               placeholder="Enter quantity on hand"
@@ -134,7 +131,7 @@ const CreateProductPage = () => {
           <div className="form-group">
             <label htmlFor="formReservedQuantity">Reserved Quantity</label>
             <input
-              type="number"
+             
               id="formReservedQuantity"
               {...register("reservedQuantity")}
               placeholder="Enter reserved quantity"
@@ -147,7 +144,7 @@ const CreateProductPage = () => {
           <div className="form-group">
             <label htmlFor="formDiscount">Discount</label>
             <input
-              type="number"
+             
               id="formDiscount"
               {...register("discount")}
               placeholder="Enter discount"

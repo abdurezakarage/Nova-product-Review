@@ -1,34 +1,27 @@
-
-/* Styling for the Product Card */
-
-.product-card .card-title {
-  font-size: 1.75rem;
-  font-weight: bold;
-  text-align: center;
-}
-
-.product-card .card-text {
-  margin-bottom: 10px;
-}
-
-/* Styling for the Review Product button */
-.btn-danger {
-  font-size: 1rem;
-  padding: 10px 20px;
-  border-radius: 5px;
-}
-
+/* General Styling for the Product Page */
 .product-page-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 20px;
-  min-height: 100vh; /* Make sure the content takes the full viewport height */
-  background-color: #f8f9fa; /* Light background for the page */
+  padding: 10px; /* Reduced padding */
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+.product-page-container h2 {
+  font-size: 2.5rem; /* Default font size for larger screens */
+  background: linear-gradient(90deg, #ff7eb3, #ff758c, #ff6f61); /* Vibrant gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-/* Style for the product card */
+/* Center the product card */
 .product-card {
   display: flex;
   flex-direction: column;
@@ -36,20 +29,21 @@
   max-width: 800px;
   width: 100%;
   background-color: white;
-  padding: 20px;
+  padding: 15px; /* Reduced padding */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   margin-bottom: 20px;
+  text-align: center; /* Ensure the text is centered */
 }
 
 /* Product image styling */
 .product-card img {
-  max-height: 300px;
+  max-height: 250px; /* Reduced max-height */
   object-fit: cover;
-  margin-bottom: 20px;
+  margin-bottom: 15px; /* Reduced margin */
 }
 
-/* Center the title, description, and price */
+/* Styling for Product Title */
 .product-card .card-title {
   font-size: 1.5rem;
   font-weight: 600;
@@ -57,116 +51,130 @@
   margin-bottom: 10px;
 }
 
+/* Styling for Product Description and Price */
 .product-card .card-text {
   text-align: center;
   font-size: 1.1rem;
-  margin-bottom: 10px;
+  margin-bottom: 8px; /* Reduced margin */
 }
 
-/* Reviews section */
-.reviews-section {
-  width: 100%;
-  max-width: 800px;
-  margin-top: 20px;
-}
-
-.reviews-section h3 {
-  text-align: center;
-  color: blue;
-  cursor: pointer;
-}
-
-.reviews-list {
-  padding-left: 0;
-}
-
-.reviews-list .list-group-item {
-  margin-bottom: 10px;
-  background-color: #f8f9fa;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-}
-
-/* Button style */
-.product-card .btn-danger {
-  display: block;
-  width: 100%;
-  background-color: #dc3545;
-  color: white;
-  padding: 12px;
-  font-size: 1.1rem;
-  border-radius: 8px;
-  border: none;
-  text-align: center;
-  margin-top: 20px;
-  cursor: pointer;
-}
-
-.product-card .btn-danger:hover {
-  background-color: #c82333;
-}
-/* Flexbox container for Delete and Review buttons */
+/* Review and Delete Buttons */
 .button-container {
   display: flex;
-  justify-content: flex-start; /* Align the buttons to the left */
-  gap: 30px; /* Adds space between the buttons */
-  align-items: center; /* Vertically center-align the items */
-  margin-bottom: 20px; /* Adds space below the buttons */
+  justify-content: space-between; /* Space out buttons */
+  gap: 20px;
+  align-items: center;
+  margin-top: 15px;
+  width: 100%;
 }
 
-/* Styling for Review Product button (blue) */
+.btn-review, .btn-danger {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: auto;
+}
+
 .btn-review {
-  background-color: #007bff; /* Blue color for the Review Product button */
+  background-color: #007bff;
   border-color: #007bff;
   color: white;
-  font-size: 1rem;
-  padding: 12px 30px; /* Increased padding for a wider button */
-  border-radius: 5px;
-  cursor: pointer;
-  width: auto; /* Ensure button is not too stretched */
 }
 
 .btn-review:hover {
-  background-color: #0056b3; /* Darker blue when hovered */
+  background-color: #0056b3;
   border-color: #0056b3;
 }
 
-/* Styling for Delete Product button (red) */
 .btn-danger {
-  background-color: #dc3545; /* Red color for the Delete Product button */
+  background-color: #dc3545;
   border-color: #dc3545;
   color: white;
-  font-size: 1rem;
-  padding: 12px 30px; /* Increased padding for a wider button */
-  border-radius: 5px;
-  cursor: pointer;
-  width: auto; /* Ensure button is not too stretched */
 }
 
 .btn-danger:hover {
-  background-color: #c82333; /* Darker red when hovered */
+  background-color: #c82333;
   border-color: #bd2130;
-}
-
-/* Remove underline from Review Product link */
-.reviews-section {
-  font-size: 1.2rem; /* Optional: Make the text slightly larger */
-  font-weight: 600; /* Bold text */
-  cursor: pointer;
-  text-decoration: none; /* Remove underline */
-  display: flex;
-  align-items: center; /* Vertically center the text and buttons */
 }
 
 /* Media query for smaller screen sizes */
 @media (max-width: 768px) {
+  .product-page-container {
+    padding: 15px;
+  }
+.product-page-container h2 {
+    font-size: 2rem; /* Slightly smaller font size */
+  }
+  .product-card {
+    padding: 10px; /* Adjust padding */
+    margin: 0 auto; /* Ensure card is centered */
+  }
+
+  .product-card .card-title {
+    font-size: 1.4rem; /* Adjust title size */
+  }
+
+  .product-card .card-text {
+    font-size: 1rem; /* Adjust description size */
+    margin-bottom: 6px; /* Reduced margin */
+  }
+
+  .product-card img {
+    max-height: 200px; /* Adjust image size */
+    margin-bottom: 10px; /* Reduced margin */
+  }
+
+  /* Stack buttons vertically on smaller screens */
   .button-container {
-    flex-direction: column; /* Stack buttons vertically on smaller screens */
-    gap: 15px; /* Reduced gap between buttons when stacked */
+    flex-direction: column;
+    gap: 10px;
+    position: relative; /* Adjust positioning */
+    margin-top: 20px; /* Add more space between the card and buttons */
   }
 
   .btn-review, .btn-danger {
-    width: 100%; /* Make buttons full width on smaller screens */
-    padding: 12px; /* Adjust padding for full-width buttons */
+    width: 100%; /* Make buttons full-width */
+    padding: 12px;
+  }
+}
+
+/* Media query for very small screens (mobile-first) */
+@media (max-width: 480px) {
+  .product-card {
+    padding: 8px; /* Even smaller padding for very small screens */
+  }
+.product-page-container h2 {
+    font-size: 1.8rem; /* Smaller font size for better readability */
+    letter-spacing: 1px; /* Reduce letter spacing */
+    margin-bottom: 20px; /* Adjust margin for compact design */
+  }
+  .product-card .card-title {
+    font-size: 1.3rem;
+  }
+
+  .product-card .card-text {
+    font-size: 0.9rem; /* Smaller font size for very small screens */
+  }
+
+  .product-card img {
+    max-height: 180px; /* Adjust image size */
+  }
+
+  /* Ensure buttons are outside the container and aligned horizontally on small screens */
+  .button-container {
+    position: absolute;
+    bottom: 20px; /* Position buttons at the bottom of the page */
+    left: 50%;
+    transform: translateX(-50%); /* Center the buttons horizontally */
+    display: flex;
+    justify-content: space-between;
+    width: 80%; /* Adjust width to fit screen */
+    gap: 10px; /* Space between buttons */
+  }
+
+  .btn-review, .btn-danger {
+    width: 48%; /* Make buttons slightly smaller, 48% width */
+    padding: 10px 15px; /* Adjust button padding */
   }
 }

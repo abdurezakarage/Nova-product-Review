@@ -13,11 +13,11 @@
   align-items: center;
 }
 
-.button-container, 
+/* .button-container, 
 .header-container > div:last-child {
   display: flex;
   align-items: center;
-}
+} */
 
 .nav-link {
   margin: 0 15px;
@@ -35,8 +35,8 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .header-container {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction:row;
+    align-items: flex-end;
     padding: 15px;
   }
 

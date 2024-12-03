@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useParams } from "react-router-dom";
 import { Container } from "@mantine/core"; // Assume Mantine UI is used
-import ReviewForm from "../../components/ReviewForm/ReviewForm"
+import ReviewForm from "../../components/ReviewForm/ReviewForm";
 import axios from "axios";
-import "./ReviewPage.css"; // Make sure you have this file for additional styling
+import "./ReviewPage.css"; // Ensure this file exists for additional styling
 
 const ReviewPage = () => {
   const { id } = useParams(); // Get product ID from the URL
@@ -96,17 +96,24 @@ const ReviewPage = () => {
   return (
     <Container>
       <div>
+        {/* The review form is always shown */}
         <ReviewForm productId={id} onNewReview={handleNewReview} />
       </div>
-      <div>Average Rating: {calculateAverageRating()}</div>
+      <div>
+        {/* Hide average rating if no reviews exist */}
+        {reviews.length > 0 && (
+          <div>
+            <h3>Average Rating: {calculateAverageRating()}</h3>
+          </div>
+        )}
+      </div>
       <div className="reviews-container">
         {reviews.length === 0 ? (
-          <p>No reviews yet.</p>
+          <p>No reviews available for this product yet.</p>
         ) : (
           reviews.map((review, index) => (
             <div key={index} className="review-box">
               <h5>{review.reviewerName}</h5>
-
               <p>{review.comment}</p>
               <p>{renderStars(review.rating)}</p>
             </div>

@@ -1,0 +1,42 @@
+/* Wrapper to arrange elements in a flex row */
+.filters {
+  display: flex;
+  width: fit-content;
+  gap: 1rem; /* Space between form elements */
+ 
+}
+
+/* Individual form elements in the filters */
+.filters .category,
+.filters .minprice,
+.filters .maxprice {
+  flex: 1 1 30%; /* Each item takes at least 30% of the row */
+  min-width: 200px; /* Minimum width to avoid squishing on small screens */
+}
+
+/* Ensure that form controls take full width */
+.filters .category select,
+.filters .minprice input,
+.filters .maxprice input {
+  width: 50%;
+ 
+}
+.inputw{
+  height: 30%;
+}
+
+/* Stack the items vertically on small screens */
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column; /* Stack the items vertically */
+  }
+
+  /* Remove the flex-grow behavior and set each element to 100% width */
+  .filters .category,
+  .filters .minprice,
+  .filters .maxprice {
+    flex: none;
+    width: 70%; /* Make each element take full width */
+    margin-bottom: 1rem; /* Add space between stacked elements */
+  }
+}

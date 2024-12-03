@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Button } from "react-bootstrap"; // Import React Bootstrap components
+import { Card, Image, Text, Button } from "@mantine/core"; // Import Mantine components
 import { useNavigate } from "react-router-dom";
 import "./ProductCard.css";
 
@@ -7,24 +7,33 @@ const ProductCard = ({ product }) => {
   const navigate = useNavigate();
 
   return (
-    <Card className="product-card">
-      <Card.Img
-        variant="top"
-        className="product-image"
-        src={product.imageUrls[0]}
-        alt={product.name}
-      />
-      <Card.Body>
-        <Card.Title className="product-name">{product.name}</Card.Title>
-        <Card.Text className="product-price">${product.price}</Card.Text>
-        <Button
-          className="view-button"
-          variant="primary"
-          onClick={() => navigate(`/products/${product.id}`)}
-        >
-          View Details
-        </Button>
-      </Card.Body>
+    <Card shadow="sm" padding="lg" radius="md" className="product-card">
+      <Card.Section>
+        <Image
+          src={product.imageUrls[0]}
+          alt={product.name}
+          height={160}
+          className="product-image"
+        />
+      </Card.Section>
+
+      <Text weight={500} size="lg" mt="md" className="product-name">
+        {product.name}
+      </Text>
+
+      <Text color="dimmed" size="sm" className="product-price">
+        ${product.price}
+      </Text>
+
+      <Button
+        variant="filled"
+        color="blue"
+        mt="md"
+        fullWidth
+        onClick={() => navigate(`/products/${product.id}`)}
+      >
+        View Details
+      </Button>
     </Card>
   );
 };

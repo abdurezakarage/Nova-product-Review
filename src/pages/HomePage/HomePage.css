@@ -2,7 +2,6 @@
 .pcontainer {
   padding: 0 15px; /* Adjust the padding of the page container */
 }
-
 /* Filter container and sorting */
 .filter-container {
   display: flex;
@@ -26,7 +25,7 @@
 .filter-sort-container button,
 .filter-sort-container .form-control {
   min-width: 150px; /* Adjust width as needed */
-  padding: 5px 10px;
+  padding: 10px 10px;
   font-size: 14px;
   border-radius: 4px;
   border: 1px solid #ccc;
@@ -35,7 +34,7 @@
 /* Filters styling */
 .filter-sort-container .filters {
   display: flex;
-  gap: 10px; /* Space between individual filter fields */
+  gap: 5px; /* Space between individual filter fields */
 }
 
 /* Sort styling */

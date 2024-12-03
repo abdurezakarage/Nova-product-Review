@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Form, Row, Col, Button } from "react-bootstrap";
+import { Form, Row, Col } from "react-bootstrap";
 import { fetchProducts } from "../../Api/api";
-
+import "./Filters.css"
 const Filters = ({ setFilters }) => {
-  const [categories, setCategories] = useState([]); // Available categories
-  const [category, setCategory] = useState(""); // Selected category
-  const [minPrice, setMinPrice] = useState(""); // Minimum price
-  const [maxPrice, setMaxPrice] = useState(""); // Maximum price
+  const [categories, setCategories] = useState([]);
+  const [category, setCategory] = useState("");
+  const [minPrice, setMinPrice] = useState("");
+  const [maxPrice, setMaxPrice] = useState("");
 
   // Fetch categories on component load
   useEffect(() => {
@@ -32,7 +32,7 @@ const Filters = ({ setFilters }) => {
     loadCategories();
   }, []);
 
-  // Update filters dynamically when values change
+  // Update filters when values change
   useEffect(() => {
     setFilters((prev) => ({
       ...prev,
@@ -44,9 +44,8 @@ const Filters = ({ setFilters }) => {
 
   return (
     <div>
-      {/* <h2>Filter Products</h2> */}
-      <Row className="g-2 mb-4">
-        <Col>
+      <div className="filters">
+        <div className="category">
           <Form.Select
             placeholder="Category"
             value={category}
@@ -63,24 +62,34 @@ const Filters = ({ setFilters }) => {
               <option>No categories available</option>
             )}
           </Form.Select>
-        </Col>
-        {/* <Col>
+        </div>
+        <div className="minprice inputw">
           <Form.Control
-            type="number"
             placeholder="Min Price"
             value={minPrice}
             onChange={(e) => setMinPrice(e.target.value)}
+            style={{
+              height: "30px", // Set a smaller height
+              width: "10px", // Set a smaller width
+              padding: "8px", // Set padding to reduce space inside
+              fontSize: "14px", // Smaller font size for a compact look
+            }}
           />
-        </Col>
-        <Col>
+        </div>
+        <div className="maxprice inputw">
           <Form.Control
-            type="number"
             placeholder="Max Price"
             value={maxPrice}
             onChange={(e) => setMaxPrice(e.target.value)}
+            style={{
+              height: "30px", // Set a smaller height
+              width: "10px", // Set a smaller width
+              padding: "8px", // Set padding to reduce space inside
+              fontSize: "14px", // Smaller font size for a compact look
+            }}
           />
-        </Col> */}
-      </Row>
+        </div>
+      </div>
     </div>
   );
 };
