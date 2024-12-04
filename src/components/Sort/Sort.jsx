@@ -14,10 +14,10 @@ const Sort = ({ setFilters }) => {
         placeholder="Sort by"
         onChange={handleSortChange}
         style={{
-          height: "30px", // Set a smaller height
-          width: "30px", // Set a smaller width
-          padding: "5px", // Set padding to reduce space inside
-          fontSize: "14px", // Smaller font size for a compact look
+          height: "30px", 
+          width: "30px", 
+          padding: "5px", 
+          fontSize: "14px",
         }}
       >
         <option value="">Sort by</option>

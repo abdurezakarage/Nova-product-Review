@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { TextInput, Textarea, Button, Group, Title } from "@mantine/core";
-import { postReview } from "../../Api/api"; // Import the postReview function
+import { postReview } from "../../Api/api"; 
 import "./ReviewForm.css";
-
 const ReviewForm = ({ productId, onNewReview }) => {
   const [rating, setRating] = useState(1);
   const [reviewerName, setReviewerName] = useState("");
@@ -31,10 +30,8 @@ const ReviewForm = ({ productId, onNewReview }) => {
     try {
       const newReview = await postReview(reviewData);
 
-      // Call the onNewReview function to update the parent component with the new review
+     
       onNewReview(newReview);
-
-      // Reset form fields
       setRating(1);
       setReviewerName("");
       setComment("");
@@ -49,7 +46,7 @@ const ReviewForm = ({ productId, onNewReview }) => {
 
   return (
     <form onSubmit={handleSubmit} className="review-form">
-      <Title order={2}>Review</Title>
+      <Title order={2}>Review Product</Title>
 
       <TextInput
         label="Reviewer Name"

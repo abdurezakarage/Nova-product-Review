@@ -1,13 +1,45 @@
-.review-page .star-rating {
-  display: inline-flex;
-  align-items: center;
-}
-.star-rating span {
-  margin-right: 2px;
-}
 /* ReviewPage.css */
 
-/* Container for all reviews */
+/* Container for all reviews and review form */
+.reviews-and-form-container {
+  display: flex;
+  flex-direction: column; /* Default is column for small screens */
+  gap: 50px;
+}
+
+.reviews-container {
+  max-height: 500px; /* Set a max height for the reviews container */
+  overflow-y: auto; /* Enables vertical scrolling */
+  padding: 20px; /* Optional: Adjust padding as needed */
+}
+.average-rating {
+  display: flex;
+  align-items: center; /* Aligns the items vertically in the center */
+  gap: 10px; /* Adds some space between the label and the value */
+  font-size: 1em; /* Adjust font size as needed */
+}
+
+
+/* For larger screens, use row layout */
+@media (min-width: 768px) {
+  .reviews-and-form-container {
+    flex-direction: row;
+    justify-content: space-between; /* Distribute space between the form and reviews */
+  }
+  .formcontainer {
+  position: sticky;
+  top: 0; /* Sticks the form to the top when you scroll */
+  z-index: 10; /* Ensures the form stays above the review list */
+  width: 80%; /* Adjust this to your desired width */
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff; /* Optional: Ensure background color to avoid transparency */
+}
+
+}
+
+/* Existing styles for reviews-container and review-box */
 .reviews-container {
   display: flex;
   flex-direction: column;
@@ -15,7 +47,6 @@
   padding: 20px;
 }
 
-/* Box for each individual review */
 .review-box {
   border: 1px solid #ccc;
   padding: 20px;
@@ -24,27 +55,23 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Review title (reviewer name) styling */
 .review-box h5 {
   margin: 0;
   font-size: 1.2em;
   font-weight: bold;
 }
 
-/* Review comment styling */
 .review-box p {
   margin: 10px 0;
   color: #555;
 }
 
-/* Optional: Rating star styling */
 .review-box span {
   font-size: 1.2em;
   color: #ffc107;
 }
 
-/* Adjust the container's width */
 .mantine-Container-root {
-  max-width: 600px; /* Set the maximum width of the container */
-  margin: 0 auto; /* Center the container */
+  max-width: 900px;
+  margin: 0 auto;
 }
