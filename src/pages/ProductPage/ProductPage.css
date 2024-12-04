@@ -5,7 +5,7 @@
   align-items: center;
   flex-direction: column;
   padding: 5px; 
-  min-height: 50vh;
+  min-height: 100vh;
   background-color: #f8f9fa;
 }
 .product-page-container h2 {
@@ -97,7 +97,7 @@
 }
 
 .btn-danger:hover {
-  background-color: #c82333;
+  background-color: #971320;
   border-color: #bd2130;
 }
 

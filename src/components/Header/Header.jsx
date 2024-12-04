@@ -30,10 +30,10 @@ const Header = () => {
       <div className={`links ${isMenuOpen ? "open" : ""}`}>
         <div className="button-container">
           <Link to="/" className="nav-link" onClick={closeMenu}>
-            Home
+            <button className="header-button">Home</button>
           </Link>
           <Link to="/create-product" className="nav-link" onClick={closeMenu}>
-            Create Product
+            <button className="header-button"> Create Product</button>
           </Link>
         </div>
       </div>

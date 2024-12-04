@@ -1,6 +1,6 @@
 /* Homepage css */
 .pcontainer {
-  padding: 0 15px;
+  padding: 0 5px;
 }
 .filter-container {
   display: flex;
@@ -37,7 +37,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .product-item {
   display: flex;

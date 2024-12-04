@@ -63,7 +63,30 @@
   background-color: #050605;
   border-radius: 5px;
 }
+.header-container .button-container button {
+  background-color: #df0ab8; /* Nova's branding color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
+/* Hover effect for Header buttons */
+.header-container .button-container button:hover {
+  background-color: #00bcd4; /* Hover color */
+  transform: translateY(-2px);
+}
+
+/* Active effect for Header buttons */
+.header-container .button-container button:active {
+  transform: translateY(1px);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
 /* Responsive Design */
 @media (max-width: 768px) {
   .header-container {
@@ -103,7 +126,10 @@
   .icon {
     display: flex;
   }
+  .header-container .button-container button {
+    width: 100%; 
+    margin-bottom: 10px; 
+  }
 }
 
-/* Small Screens: Fix for <= 480px */
 
