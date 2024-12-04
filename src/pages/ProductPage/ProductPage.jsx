@@ -5,8 +5,8 @@ import { Button, Container, Card } from "react-bootstrap";
 import "./ProductPage.css";
 
 const ProductPage = ({ products }) => {
-  const { id } = useParams(); // Get the product ID from the URL
-  const navigate = useNavigate(); // Use navigate for programmatic navigation
+  const { id } = useParams(); 
+  const navigate = useNavigate(); 
   const [product, setProduct] = useState(null);
   const [reviews, setReviews] = useState([]);
   const [showFullDescription, setShowFullDescription] = useState(false);
@@ -27,7 +27,7 @@ const ProductPage = ({ products }) => {
         setReviews(reviewData);
       } catch (error) {
         console.error("Error fetching reviews:", error);
-        setReviews([]); // Set reviews to empty on error
+        setReviews([]); 
       }
     };
 
@@ -39,16 +39,16 @@ const ProductPage = ({ products }) => {
     try {
       await deleteProduct(id);
       alert("Product deleted successfully!");
-      navigate("/"); // Redirect to homepage after deletion
+      navigate("/");
     } catch (error) {
       console.error("Error deleting product:", error);
       alert("Failed to delete product.");
     }
   };
 
-  // Navigate to reviews page
+
   const handleNavigateToReviews = () => {
-    navigate(`/reviews/${id}`); // Pass the product ID to reviews page
+    navigate(`/reviews/${id}`);
   };
 
   const toggleDescription = () => {

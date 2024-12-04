@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Form, Row, Col } from "react-bootstrap";
+import { Form} from "react-bootstrap";
 import { fetchProducts } from "../../Api/api";
 import "./Filters.css"
 const Filters = ({ setFilters }) => {
@@ -32,7 +32,6 @@ const Filters = ({ setFilters }) => {
     loadCategories();
   }, []);
 
-  // Update filters when values change
   useEffect(() => {
     setFilters((prev) => ({
       ...prev,
@@ -69,10 +68,10 @@ const Filters = ({ setFilters }) => {
             value={minPrice}
             onChange={(e) => setMinPrice(e.target.value)}
             style={{
-              height: "30px", // Set a smaller height
-              width: "10px", // Set a smaller width
-              padding: "8px", // Set padding to reduce space inside
-              fontSize: "14px", // Smaller font size for a compact look
+              height: "30px", 
+              width: "10px",
+              padding: "8px", 
+              fontSize: "14px", 
             }}
           />
         </div>
@@ -82,10 +81,10 @@ const Filters = ({ setFilters }) => {
             value={maxPrice}
             onChange={(e) => setMaxPrice(e.target.value)}
             style={{
-              height: "30px", // Set a smaller height
-              width: "10px", // Set a smaller width
-              padding: "8px", // Set padding to reduce space inside
-              fontSize: "14px", // Smaller font size for a compact look
+              height: "30px", 
+              width: "10px", 
+              padding: "8px", 
+              fontSize: "14px",
             }}
           />
         </div>

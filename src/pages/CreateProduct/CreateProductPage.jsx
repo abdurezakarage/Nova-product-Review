@@ -1,24 +1,24 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
-import { createProduct } from "../../Api/api"; // Adjust the path as needed
-import "./CreateProductPage.css"; // Import custom CSS
+import { useNavigate } from "react-router-dom"; 
+import { createProduct } from "../../Api/api"; 
+import "./CreateProductPage.css"; 
 
 const CreateProductPage = () => {
   const { handleSubmit, register } = useForm();
-  const navigate = useNavigate(); // Initialize navigate
+  const navigate = useNavigate(); 
 
-  // Get the logged-in user ID (replace this with your actual authentication logic)
-  const addedBy = "user123"; // Example user ID, replace with dynamic value (e.g., from context or localStorage)
+
+  const addedBy = "user123"; 
 
   const onSubmit = async (data) => {
     try {
       const productData = {
         ...data,
-        addedBy, // Add the user ID to the data being sent
+        addedBy, 
       };
       await createProduct(productData);
-      navigate("/"); // Redirect to the homepage after product is created
+      navigate("/"); 
     } catch (error) {
       console.error("Error creating product:", error);
       alert("Failed to create product.");

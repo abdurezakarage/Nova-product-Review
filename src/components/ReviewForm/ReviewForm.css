@@ -4,24 +4,18 @@ form {
   max-width: 600px;
   margin: 0 auto;
 }
-
-
 form .form-group:nth-child(1) .form-control {
   width: 100%;
   max-width: 100px; 
   height: 35px; 
   margin: 0 auto;
 }
-
-
 form .form-group:nth-child(2) .form-control {
   width: 100%;
   max-width: 400px; 
   height: 35px; 
   margin: 0 auto;
 }
-
-
 form .form-group:nth-child(3) .form-control {
   width: 100%;
   max-width: 400px; 
@@ -30,8 +24,6 @@ form .form-group:nth-child(3) .form-control {
   resize: none; 
   padding: 5px; 
 }
-
-
 form .btn {
   margin-top: 15px;
   width: 100%;
@@ -45,7 +37,6 @@ form .btn {
   flex-wrap: wrap;
   gap: 20px; 
 }
-
 .review-item {
   flex: 1 1 calc(20% - 20px); 
   box-sizing: border-box;
@@ -55,7 +46,6 @@ form .btn {
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
 .review-item h4 {
   font-size: 1.2rem;
   margin-bottom: 10px;

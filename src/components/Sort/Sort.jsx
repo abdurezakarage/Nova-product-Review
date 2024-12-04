@@ -23,7 +23,6 @@ const Sort = ({ setFilters }) => {
         <option value="">Sort by</option>
         <option value="price,asc">Price: Low to High</option>
         <option value="price,desc">Price: High to Low</option>
-        <option value="rating,desc">Rating: High to Low</option>
       </Form.Select>
     </div>
   );

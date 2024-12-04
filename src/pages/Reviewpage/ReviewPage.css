@@ -1,45 +1,39 @@
-/* ReviewPage.css */
-
-/* Container for all reviews and review form */
+/* ReviewPage css */
 .reviews-and-form-container {
   display: flex;
-  flex-direction: column; /* Default is column for small screens */
+  flex-direction: column;
   gap: 50px;
 }
 
 .reviews-container {
-  max-height: 500px; /* Set a max height for the reviews container */
-  overflow-y: auto; /* Enables vertical scrolling */
-  padding: 20px; /* Optional: Adjust padding as needed */
+  max-height: 500px;
+  overflow-y: auto;
+  padding: 20px;
 }
 .average-rating {
   display: flex;
-  align-items: center; /* Aligns the items vertically in the center */
-  gap: 10px; /* Adds some space between the label and the value */
-  font-size: 1em; /* Adjust font size as needed */
+  align-items: center;
+  gap: 10px;
+  font-size: 1em;
 }
 
-
-/* For larger screens, use row layout */
+/* Responsive */
 @media (min-width: 768px) {
   .reviews-and-form-container {
     flex-direction: row;
-    justify-content: space-between; /* Distribute space between the form and reviews */
+    justify-content: space-between;
   }
   .formcontainer {
-  position: sticky;
-  top: 0; /* Sticks the form to the top when you scroll */
-  z-index: 10; /* Ensures the form stays above the review list */
-  width: 80%; /* Adjust this to your desired width */
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff; /* Optional: Ensure background color to avoid transparency */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+  }
 }
-
-}
-
-/* Existing styles for reviews-container and review-box */
 .reviews-container {
   display: flex;
   flex-direction: column;

@@ -1,60 +1,56 @@
-/* Header container styling */
+/* Header css */
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color:rgb(252, 249, 240); /* Dark background for the header */
-  padding: 15px 30px; /* Add padding to space out the elements */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  position: relative; /* To position the hamburger icon */
+  background-color:rgb(252, 249, 240); 
+  padding: 15px 30px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  position: relative; 
 }
-
-/* Logo styling */
 .logo img {
-  width: 200px; /* Adjust logo size */
+  width: 200px; 
   height: auto;
 }
-
-/* Link container that holds the buttons */
 .links {
-  display: flex; /* Use flexbox to display buttons in a row */
-  justify-content: flex-end; /* Align the buttons to the right */
-  gap: 20px; /* Space between the buttons */
-  width: auto; /* Allow the container to adjust size */
+  display: flex; 
+  justify-content: flex-end; 
+  gap: 20px; 
+  width: auto; 
 }
 
-/* Button container */
+
 .button-container {
   display: flex;
   justify-content: flex-end;
-  width: 350px; /* Set width for the container holding buttons (adjust as needed) */
+  width: 350px; 
 }
 
-/* Navigation link styling */
+
 .nav-link {
-  color: #df0ab8; /* White color for links */
-  font-size: 18px; /* Font size */
-  font-weight: 500; /* Medium weight */
-  text-decoration: none; /* Remove underline */
+  color: #df0ab8; 
+  font-size: 18px; 
+  font-weight: 500; 
+  text-decoration: none;
   transition: color 0.3s ease, transform 0.3s ease;
-  white-space: nowrap; /* Prevent line break inside the link */
+  white-space: nowrap; 
 }
 
-/* Hover effect for nav links */
+
 .nav-link:hover {
-  color: #00bcd4; /* Light cyan color */
-  transform: translateY(-3px); /* Slight lift effect */
+  color: #00bcd4; 
+  transform: translateY(-3px); 
 }
 
-/* Hamburger menu styling (visible on small screens) */
-.hamburger {
-  display: none; /* Hide hamburger by default */
+
+.icon {
+  display: none; 
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
   position: absolute;
-  right: 30px; /* Align the hamburger icon to the right */
-  top: 15px; /* Position it towards the top */
+  right: 30px; 
+  top: 15px; 
 }
 
 .bar {
@@ -67,42 +63,39 @@
 /* Responsive design */
 @media (max-width: 768px) {
   .header-container {
-    flex-direction: column; /* Stack the logo and links vertically on small screens */
+    flex-direction: column; 
     align-items: flex-start;
     padding: 20px;
   }
 
   .logo img {
-    width: 170px; /* Adjust logo size for smaller screens */
+    width: 170px; 
   }
 
   .links {
-    width: 100%; /* Make the buttons span the full width */
-    justify-content: flex-start; /* Align the links to the left */
+    width: 100%; 
+    justify-content: flex-start; 
     gap: 15px;
     margin-top: 10px;
-    display: none; /* Initially hide the links on mobile */
-    flex-direction: column; /* Stack the links vertically on mobile */
-    position: absolute; /* Position it above other content */
-    top: 60px; /* Position it just below the header */
+    display: none;
+    flex-direction: column; 
+    position: absolute;
+    top: 60px;
     left: 0;
    background-color:rgb(252, 249, 240);
-    width: 100%; /* Take up full width */
-    z-index: 10; /* Ensure it's above other content */
+    width: 100%; 
+    z-index: 10;
   }
 
   .links.open {
-    display: flex; /* Show the links when the menu is open */
+    display: flex; 
   }
-
-  /* Adjust width for the button container on mobile screens */
   .button-container {
     width: 100%;
-    justify-content: flex-start; /* Align items to the left */
+    justify-content: flex-start; 
   }
 
-  /* Show the hamburger menu on small screens */
-  .hamburger {
-    display: flex; /* Show hamburger */
+  .icon {
+    display: flex; 
   }
 }

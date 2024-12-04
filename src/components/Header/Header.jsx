@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import { Image } from "@mantine/core";
-import { Link } from "react-router-dom"; // Import Link
-import "./Header.css"; // Import the updated CSS
+import { Link } from "react-router-dom"; 
+import "./Header.css"; // 
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to toggle the menu
-
-  // Function to toggle the menu
+  const [isMenuOpen, setIsMenuOpen] = useState(false); 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -21,7 +19,8 @@ const Header = () => {
           />
         </Link>
       </div>
-
+      
+      
       <div className={`links ${isMenuOpen ? "open" : ""}`}>
         <div className="button-container">
           <Link to="/" className="nav-link">
@@ -33,8 +32,8 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Hamburger menu button for mobile */}
-      <div className="hamburger" onClick={toggleMenu}>
+      {/* button for mobile */}
+      <div className="icon" onClick={toggleMenu}>
         <span className="bar"></span>
         <span className="bar"></span>
         <span className="bar"></span>
