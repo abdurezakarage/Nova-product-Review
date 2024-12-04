@@ -7,24 +7,28 @@ const ProductCard = ({ product }) => {
   const navigate = useNavigate();
 
   return (
-    <Card shadow="sm" padding="lg" radius="md" className="product-card">
-      <Card.Section>
+    <div className="productcard">
+      {/* Image Container */}
+      <div className="product-card-image">
         <Image
           src={product.imageUrls[0]}
           alt={product.name}
-          height={160}
-          className="product-image"
+          style={{
+            width: "auto",
+            height: "160px", // Force height to 160px
+            objectFit: "contain", // Maintain aspect ratio and fit within height
+            display: "block", // Ensure proper rendering
+          }}
         />
-      </Card.Section>
+      </div>
 
-      <Text weight={500} size="lg" mt="md" className="product-name">
-        {product.name}
-      </Text>
+      {/* Product Name */}
+      <div className="product-name">{product.name}</div>
 
-      <Text color="dimmed" size="sm" className="product-price">
-        ${product.price}
-      </Text>
+      {/* Product Price */}
+      <div className="product-price">${product.price}</div>
 
+      {/* Button */}
       <Button
         variant="filled"
         color="blue"
@@ -34,7 +38,7 @@ const ProductCard = ({ product }) => {
       >
         View Details
       </Button>
-    </Card>
+    </div>
   );
 };
 

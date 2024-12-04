@@ -57,6 +57,25 @@
   font-size: 1.1rem;
   margin-bottom: 8px; /* Reduced margin */
 }
+/* Product description styling */
+.product-card .description {
+  text-align: left; /* Align text to the left */
+  font-size: 1.1rem;
+  margin-bottom: 8px; /* Reduced margin */
+  line-height: 1.6; /* Improve readability with line height */
+}
+
+/* See More / See Less link styling */
+.see-more {
+  color: #007bff;
+  /* font-weight: bold; */
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.see-more:hover {
+  color: rgb(212, 212, 32);
+}
 
 /* Review and Delete Buttons */
 .button-container {

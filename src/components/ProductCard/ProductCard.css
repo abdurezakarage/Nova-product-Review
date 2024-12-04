@@ -1,0 +1,98 @@
+.productcard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 250px; /* Adjust as needed */
+  height: 350px; /* Ensure consistent card height */
+  margin: 16px;
+}
+
+.productcard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 250px; /* Adjust as needed */
+  height: 350px; /* Fixed card height */
+  margin: 16px;
+}
+
+.product-card-image {
+  width: 100%;
+  height: 150px; /* Fixed height for the image container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+.product-card-image img {
+  height: 160px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  margin: 8px 0;
+  color: #333;
+  height: 40px; /* Fixed height to ensure uniformity */
+  overflow: hidden; /* Truncate long names */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff;
+  margin: 8px 0;
+  height: 20px; /* Fixed height to maintain alignment */
+  text-align: center;
+}
+
+
+
+.product-name {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  margin: 8px 0;
+  color: #333;
+  height: 40px; /* Fixed height to ensure uniformity */
+  overflow: hidden; /* Truncate long names */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff;
+  margin: 8px 0;
+  height: 20px; /* Fixed height to maintain alignment */
+  text-align: center;
+}
+
+button {
+  margin-top: auto; /* Push the button to the bottom of the card */
+  font-size: 14px;
+  font-weight: bold;
+}
